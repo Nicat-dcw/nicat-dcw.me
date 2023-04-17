@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import BottomBar from '../components/BottomBar'
 import Head from 'next/head'
-import store from '../store/pwa'
+import store from '../store/pwa.json'
 function MyApp({ Component, pageProps }: AppProps) {
     const MetaData = () => {
         return (
@@ -29,7 +29,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 <link rel="manifest" href="/manifest.json" />
 <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:url" content={store.appURL}/>
