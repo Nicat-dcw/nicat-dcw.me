@@ -147,7 +147,7 @@ export default function Hero() {
       <div className="flex w-full items-center justify-between rounded-2xl bg-navy-800 p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
         <div className="flex items-center">
           <div className="">
-            <img className="h-[83px] w-[83px] rounded-lg" src={user.spotify.album_art_url} alt="Album Image" />
+            <Image className="h-[83px] w-[83px] rounded-lg" src={user.spotify.album_art_url} alt="Album Image" />
           </div>
           <div className="ml-4">
             <p className="text-base font-medium text-navy-700 dark:text-white">

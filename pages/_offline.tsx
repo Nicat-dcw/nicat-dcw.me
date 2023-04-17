@@ -1,8 +1,6 @@
 import type { NextPage } from 'next'
 const Offline: NextPage = () => {
-      const handleRefresh = () => {
-        window.location.reload(false);
-    }
+    
 return (
     <>
     <div className="flex justify-center fixed h-full w-full">
@@ -11,7 +9,6 @@ return (
     <p className="text-gray-600 text-left pt-2">Try enable your wifi or ethernet to re-access this app</p>
     <div className="pt-4 linear mt-4 flex justify-center items-center justify-center rounded-xl bg-cyan-500 px-2 py-1 text-base font-medium text-white transition duration-200 hover:bg-brand-600 active:bg-brand-700 dark:bg-brand-400 dark:text-white dark:hover:bg-brand-300 dark:active:bg-brand-200">
         <button
-          onClick={handleRefresh}
           className="linear mt-4 flex items-center justify-center rounded-xl bg-brand-500 px-2 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-600 active:bg-brand-700 dark:bg-brand-400 dark:text-white dark:hover:bg-brand-300 dark:active:bg-brand-200"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-8 pb-4">
