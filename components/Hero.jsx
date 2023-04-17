@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 import store from '../store/config.json'
@@ -40,7 +40,7 @@ export default function Hero() {
         style={{ backgroundImage: `url(${store.banner ? store.banner : "https://www.shutterstock.com/image-vector/stock-vector-illustration-technology-futuristic-260nw-1496394446.jpg"})` }}
       >
         <div className="absolute -bottom-12 flex h-[87px] w-[87px] items-center justify-center rounded-full border-[4px] border-navy-700 bg-pink-400 dark:!border-navy-700">
-          <Image className="h-full w-full rounded-full" src={`https://cdn.discordapp.com/avatars/${(user.discord_user) ? store.userId : store.userId}/${(user.discord_user) ? user.discord_user.avatar : "1"}.png?size=4096`} alt="" />
+          <img layout="fill" className="h-full w-full rounded-full" src={`https://cdn.discordapp.com/avatars/${(user.discord_user) ? user.discord_user.id : store.userId}/${(user.discord_user) ? user.discord_user.avatar : "1"}.gif`} alt="" />
         </div>
       </div>
 
@@ -147,10 +147,10 @@ export default function Hero() {
       <div className="flex w-full items-center justify-between rounded-2xl bg-navy-800 p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
         <div className="flex items-center">
           <div className="">
-            <Image className="h-[83px] w-[83px] rounded-lg" src={user.spotify.album_art_url} alt="Album Image" />
+            <img className="h-[83px] w-[83px] rounded-lg" src={user.spotify.album_art_url} alt="Album Image" />
           </div>
           <div className="ml-4">
-            <p className="text-base font-medium text-navy-700 dark:text-white">
+            <p className="text-base font-medium text-white dark:text-white">
                 {user.spotify.song}
             </p>
             <p className="mt-2 text-sm text-gray-600">
